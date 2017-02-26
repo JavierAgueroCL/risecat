@@ -1,0 +1,10 @@
+/node_modules
+app/config/database.php
+app/public/storage
+app/public/hot
+app/storage/*.key
+app/vendor
+app/.idea
+app/Homestead.json
+app/Homestead.yaml
+app/.env
