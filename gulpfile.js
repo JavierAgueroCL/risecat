@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
+var moduleImporter = require('sass-module-importer');
 
 gulp.task('default', function(){
     //
@@ -9,17 +10,21 @@ gulp.task('default', function(){
 
 gulp.task('sass', function () {
     return gulp.src([
-        'app/resources/assets/stylesheets/default.scss',
+        './node_modules/normalize/normalize.css',
+        './node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss',
+        './node_modules/font-awesome/scss/font-awesome.scss',
+        './app/resources/default/assets/stylesheets/default.scss',
         ])
         .pipe(sass({
-            //outputStyle: 'compressed'
+            outputStyle: 'compressed'
         })
         .on('error', sass.logError))
-        .pipe(gulp.dest('app/resources/assets/stylesheets/'));
+        .pipe(sass({ importer: moduleImporter() }))
+        .pipe(gulp.dest('app/public/css'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('app/resources/assets/stylesheets/*.scss', ['sass']).on('change', function (e) {
+    gulp.watch('app/resources/default/assets/stylesheets/*.scss', ['sass']).on('change', function (e) {
         console.log('El archivo SASS  ha cambiado. Modificando...');
     });
 });
@@ -28,7 +33,7 @@ gulp.task('watch', function () {
 gulp.task('browser-sync', function() {
     //watch files
     var files = [
-    'app/resources/assets/stylesheets/*.scss'
+    'app/resources/default/assets/stylesheets/*.scss'
     ];
 
     //initialize browsersync

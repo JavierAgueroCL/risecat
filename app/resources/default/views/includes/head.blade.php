@@ -1,5 +1,12 @@
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@lang('welcome.title') {{ __('welcome.title') }}</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/default.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>

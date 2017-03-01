@@ -1,2 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+$rojo:          #E4292F;
+$open_sans:     "Open Sans", Tahoma, Verdana, Arial;
+a {
+  text-decoration: none;
+  font-family: $open_sans;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 //************* VARIBALES *****************/
-@import "bootstrap";
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  .tel {
+    display: inline-block;
+    padding: 20px 0;
+    width: 49%;
+    font-family: "Open Sans", Tahoma, Verdana, Arial;
+    font-size: 13px;
+    .type {
+      font-weight: bold;
+    }
+    .value a {
+      color: $rojo;
+      font-weight: bold;
+    }
+  }
+  nav {
+    display: inline-block;
+    padding: 20px 0;
+    width: 50%;
+    text-align: right;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        margin: 0;
+        list-style: none;
+        display: inline-block;
+        border-left: 1px dotted #ccc;
+        a {
+          font-size: 0.823em;
+          color: #9C9C9C;
+          padding: 0 10px;
+        }
+        &:first-child {
+          border: none;
+        }
+      }
+    }
+  }
+  .logo {
+    display: inline-block;
+    width: 49%;
+  }
+  .carro-header {
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+    vertical-align: top;
+    padding-top: 21px;
+      a {
+        display: inline-block;;
+        color: #fff;
+        background: $rojo;
+        font-family: $open_sans;
+        padding: 10px 40px;
+        border-radius: 10px;
+      }
+  }
+}
+.menu-principal {
+  background: #383838;
+  border-radius: 6px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 49%;
+    display: inline-block;
+    li {
+      margin: 0;
+      list-style: none;
+      display: inline-block;
+      a {
+        font-size: 0.823em;
+        text-transform: uppercase;
+        color: #fff;
+        display: block;
+        padding: 16px 20px;
+        border-right: 2px ridge #585858;
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -o-transition: all .4s;
+        -ms-transition: all .4s;
+        transition: all .4s;
+        border-radius: 6px;
+        margin-left: -5px;
+        &.active,
+        &:hover {
+            border-radius: 0px;
+            background: $rojo;
+        }
+      }
+      &:first-child {
+        border: none;
+        a {
+            margin-left: 0px;
+        }
+      }
+    }
+  }
+  .buscar {
+    width: 49%;
+    display: inline-block;
+    text-align: right;
+    margin-top: 1px;
+    input {
+      font-family: $open_sans;
+      padding: 8px;
+      width: 50%;
+      border-radius: 5px;
+      border: 1px solid #000;
+      margin-top: 4px;
+    }
+  }
+}
+.separador {
+    border-bottom: 1px solid #EEE;
+}
+
+.categorias {
+  display: inline-block;
+  width: 25%;
+  border: 1px solid #EEE;
+  span {
+    border-left: 1px solid #EEE;
+    border-top: 1px solid #EEE;
+    border-right: 1px solid #EEE;
+    font-size: 1.2em;
+    color: #FFF;
+    padding: 10px;
+    background: #B81D22;
+    text-transform: uppercase;
+    display: block;
+    font-family: $open_sans;
+    width: calc(100% - 20px);
+  }
+  ul {
+    list-style: none;
+    padding: 8px 0 0 0;
+    margin: 0;
+    li {
+      a {
+        display: block;
+        font-size: 0.8em;
+        padding: 8px 15px;
+        color: #9C9C9C;
+        font-family: $open_sans;
+        margin: 0 20px;
+        background: url(../images/drop_arrow.png) no-repeat 0;
+        border-bottom: 1px solid #EEE;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

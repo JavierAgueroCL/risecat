@@ -1,8 +1,14 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<!doctype html>
+<html class="no-js" lang="{{ config('app.locale') }}">
     <head>
        @include('includes.head')
     </head>
     <body>
-    @yield('content')
-    @include('includes.footer')
+      @include('includes.topbar')
+      @include('includes.navigation')
+    <main class="wrapper">
+      @include('includes.sidebar')
+      @include('includes.slider')
+      @yield('content')
+    </main>
+      @include('includes.footer')
